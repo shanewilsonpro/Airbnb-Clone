@@ -76,6 +76,7 @@ export const Listings = ({ listings: items, refresh, category }) => {
   );
 
   return (
+    // <View style={{flex: 1}}>
     <BottomSheetFlatList
       renderItem={renderRow}
       data={loading ? [] : items}
@@ -85,5 +86,7 @@ export const Listings = ({ listings: items, refresh, category }) => {
         <Text style={styles.Info}>{items.length} homes</Text>
       }
     />
+    // </View>
+
   );
 };
