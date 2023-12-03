@@ -62,7 +62,7 @@ export const ExploreHeader = ({ onCategoryChanged }) => {
     <SafeAreaView style={defaultStyles.Screen}>
       <View style={styles.container}>
         <View style={styles.actionRow}>
-          <Link href={'/(modals)/booking'} asChild>
+          <Link href={`/(modals)/booking`} asChild>
             <TouchableOpacity>
               <View style={styles.searchBtn}>
                 <Ionicons name="search" size={24} />

@@ -7,6 +7,9 @@ import { Ionicons } from "@expo/vector-icons";
 import { getItemAsync, setItemAsync } from "expo-secure-store";
 import { ClerkProvider, useAuth } from "@clerk/clerk-expo";
 
+// Components
+import { ModalHeaderText } from "../components/modal-header-text";
+
 // Theme
 import Colors from "../constants/colors";
 
@@ -103,7 +106,7 @@ function RootLayoutNav() {
           presentation: "modal",
           title: "Log in or sign up",
           headerTitleStyle: {
-            fontFamily: "regular",
+            fontFamily: "semibold",
           },
           headerLeft: () => (
             <TouchableOpacity onPress={() => router.back()}>
@@ -119,6 +122,8 @@ function RootLayoutNav() {
         options={{
           presentation: "transparentModal",
           animation: "fade",
+          headerTransparent: true,
+          headerTitle: (props) => <ModalHeaderText />,
           headerLeft: () => (
             <TouchableOpacity
               onPress={() => router.back()}
